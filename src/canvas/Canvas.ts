@@ -1116,7 +1116,7 @@ export class Canvas extends SelectableCanvas implements CanvasOptions {
       };
     }
 
-    if (target) {
+    if (this.selection && target) {
       const alreadySelected = target === this._activeObject;
       if (target.selectable && target.activeOn === 'down') {
         this.setActiveObject(target, e);
